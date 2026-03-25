@@ -9,7 +9,7 @@ public class UnitTest1
     public void Test1()
     {
         var saludador = new Saludador();
-        string texto = "Hola";
+        string texto = "Holaa";
         saludador.saludar(texto);  
         Assert.Equal(texto, saludador.mensaje);  
     }
