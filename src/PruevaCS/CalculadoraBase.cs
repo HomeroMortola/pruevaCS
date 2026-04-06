@@ -9,6 +9,12 @@ namespace PruevaCS
 
     public abstract double operacion2(double a, double b);
 
+    public abstract double operacion3(double a, double b);
+
+    public abstract double operacion4(double a, double b);
+
+
+
     }
 }  
         

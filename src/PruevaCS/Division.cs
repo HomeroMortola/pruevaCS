@@ -1,10 +1,15 @@
-public class Division : IOperacion
-{
-    public double Ejecutar(double a, double b)
-    {
-        if (b == 0)
-            throw new DivideByZeroException("No se puede dividir por cero.");
+using System;
 
-        return a / b;
+namespace PruevaCS
+{
+    public class Division : IOperacion
+    {
+        public double Ejecutar(double a, double b)
+        {
+            if (b == 0)
+                throw new DivideByZeroException("No se puede dividir por cero.");
+
+            return a / b;
+        }
     }
 }
