@@ -1,9 +1,24 @@
 using PruevaCS;
 
-public class CalculadoraVacica(Suma suma,IOperacion resta) : CalculadoraBase
+public class CalculadoraVacica : CalculadoraBase
 {
-    public override double Calcular(IOperacion operacion, double a, double b)
+    private Suma _suma;
+    private Resta _resta;
+
+    public CalculadoraVacica(Suma suma, Resta resta)
     {
-        return operacion.Ejecutar(a, b);
+        _suma = suma;
+        _resta = resta;
     }
+    
+    public override double operacion1(double a, double b)
+    {
+        return _suma.Ejecutar(a, b);
+    }
+
+    public override double operacion2(double a, double b)
+    {
+        return _resta.Ejecutar(a, b);
+    }
+    
 }
