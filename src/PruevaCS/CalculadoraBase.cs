@@ -13,7 +13,10 @@ namespace PruevaCS
 
     public abstract double operacion4(double a, double b);
 
-
+    public double Calcular(IOperacion operacion, double a, double b)
+    {
+        return operacion.Ejecutar(a, b);
+    }
 
     }
 }  
