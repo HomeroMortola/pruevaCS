@@ -1,17 +1,41 @@
+using Xunit;
+using PruevaCS;
+
 namespace PruevaCS.Tests;
 
-public class TestCalculadora1{
-[Fact]
+public class TestCalculadora
+{
+    [Fact]
     public void Calculadora_Sumar_Restar_Multiplicar_Pasan()
     {
-        var calc = new Calculadora();
+        var calc = new CalculadoraVacica();
 
-        Assert.Equal(7, calc.Sumar(3, 4));
-        Assert.Equal(-1, calc.Restar(3, 4));
-        Assert.Equal(12, calc.Multiplicar(3, 4));
+    }
 
-        Assert.Equal(0, calc.Sumar(-2, 2));
-        Assert.Equal(-4, calc.Restar(-2, 2));
-        Assert.Equal(-4, calc.Multiplicar(-2, 2));
+    [Fact]
+    public void CalculadoraVacica_Suma_Pasa()
+    {
+        var calc = new CalculadoraVacica();
+        var suma = new Suma();
+
+        Assert.Equal(7.0, calc.Calcular(suma, 3.0, 4.0));
+    }
+
+    [Fact]
+    public void CalculadoraVacica_Resta_Pasa()
+    {
+        var calc = new CalculadoraVacica();
+        var resta = new Resta();
+
+        Assert.Equal(-1.0, calc.Calcular(resta, 3.0, 4.0));
+    }
+
+    [Fact]
+    public void CalculadoraVacica_Multiplicacion_Pasa()
+    {
+        var calc = new CalculadoraVacica();
+        var multiplicacion = new Multiplicacion();
+
+        Assert.Equal(12.0, calc.Calcular(multiplicacion, 3.0, 4.0));
     }
 }

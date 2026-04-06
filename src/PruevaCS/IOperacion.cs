@@ -1,5 +1,5 @@
 public interface IOperacion
     {
-        public abstract double Calcular(IOperacion operacion, double a, double b);
+        public double Ejecutar(double a, double b);
 
     }
